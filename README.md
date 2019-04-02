@@ -1,2 +1,2 @@
-# Recommender systems of Fenak web and android app
+# Recommender systems of Fenak
 Recommender Systems
