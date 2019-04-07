@@ -45,10 +45,9 @@ def final_list(list1,num1,list2,num2,list3,num3,list4,num4,list5,num5):
     final_list = []
     list_of_lists = [list1,list2,list3,list4,list5]
     numbers_of_lists = [num1,num2,num3,num4,num5]
+    quater_of_numbers_list = [round(num1/4),round(num2/4),round(num3/4),round(num4/4),round(num5/4)]
     # top3_lists_locations = []
     #numbers_of_lists_2 = [num1,num2,num3,num4,num5]
-    quater_of_numbers_list = [round(num1/4),round(num2/4),round(num3/4),round(num4/4),round(num5/4)]
-
     # #getting top 3 favorite lists locations
     # i = 0
     # while i < 3:
