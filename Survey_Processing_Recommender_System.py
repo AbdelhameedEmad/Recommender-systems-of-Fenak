@@ -7,20 +7,21 @@ from sklearn.feature_extraction.text import CountVectorizer
 # finding the first location that contains the inputed tag
 def find_business(tag, data):
     wanted_business = data.iloc[0]
-    r = data.at[0, 'categories']
+    #3 in data.iloc[0,3] is the number of the column of categories
+    r = data.iloc[0,3]
     if r.find(tag) != -1:
         wanted_business = data.iloc[0]
-        return wanted_business['name']
+        print (wanted_business['name'])
     else:
         i = 1
         while i < data.size:
-            r = data.at[i, 'categories']
+            r = data.iloc[i,3]
             if r.find(tag) != -1:
                 wanted_business = data.iloc[i]
-                return wanted_business['name']
+                print (wanted_business['name'])
                 break
             if i == data.size - 1:
-                return 'N/a'
+                print ('N/a')
             i += 1
 
 #top 100 recommended locations similar to the inputed location
