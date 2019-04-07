@@ -4,7 +4,6 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 
-
 # finding the first location that contains the inputed tag
 def find_business(tag, data):
     wanted_business = data.iloc[0]
@@ -43,17 +42,28 @@ def final_list(list1,num1,list2,num2,list3,num3,list4,num4,list5,num5):
     final_list = []
     list_of_lists = [list1,list2,list3,list4,list5]
     numbers_of_lists = [num1,num2,num3,num4,num5]
+    top3_lists_locations = []
+    #getting top 3 favorite lists locations
     i = 0
-    l = []
-    n = 0
-    while i < 5:
-        l = list_of_lists[i]
-        n = numbers_of_lists
+    while i < 3:
         j = 0
-        while j < n:
-            final_list.append(l[j])
+        max = numbers_of_lists[0]
+        max_location = 0
+        while j < len(numbers_of_lists):
+            if max < numbers_of_lists[j]:
+                max = numbers_of_lists[j]
+                max_location = j
+            if j == (len(numbers_of_lists) - 1):
+                numbers_of_lists[max_location] = -1
+                top3_lists_locations.append(max_location)
             j += 1
-        i+=1
+        i += 1
+    #getting the final list
+    c = 0
+    while c < 4:
+        if c % 2 == 0:
+            flag = True
+
     return final_list
 
 #importing the dataset and cleaning it from null value
