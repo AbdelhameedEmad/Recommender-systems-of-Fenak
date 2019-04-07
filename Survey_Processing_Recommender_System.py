@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 
 # finding the first location that contains the inputed tag
-#needs the indexing to be numbers not name
+#needs the indexing to be numbers not name so use before (data = data.set_index('name'))
 def find_business(tag, data):
     wanted_business = data.iloc[0]
     #3 in data.iloc[0,3] is the number of the column of categories
@@ -26,6 +26,7 @@ def find_business(tag, data):
             i += 1
 
 #top 100 recommended locations similar to the inputed location
+#needs the indexing to be names (data = data.set_index('name'))
 def top100(title, data):
     count = CountVectorizer()
     count_matrix = count.fit_transform(data['categories'])
