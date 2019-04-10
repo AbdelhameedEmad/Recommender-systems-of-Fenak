@@ -6,6 +6,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 # finding the first location that contains the inputed tag
 #needs the indexing to be numbers not name so use before (data = data.set_index('name'))
+
 def find_business(tag, data):
     wanted_business = data.iloc[0]
     #3 in data.iloc[0,3] is the number of the column of categories
@@ -27,6 +28,7 @@ def find_business(tag, data):
 
 #top 100 recommended locations similar to the inputed location
 #needs the indexing to be names (data = data.set_index('name'))
+
 def top100(title, data):
     count = CountVectorizer()
     count_matrix = count.fit_transform(data['categories'])
@@ -42,6 +44,7 @@ def top100(title, data):
 
 #Creating the final list
 #creating the list of recommendations
+
 def final_list(list1,num1,list2,num2,list3,num3,list4,num4,list5,num5):
     def creating_clone(list1):
         z = 0
