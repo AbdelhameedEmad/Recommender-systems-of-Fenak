@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="707fa010-c8ac-4113-b1ba-f66ca33d47ba" name="Default Changelist" comment="" />
+    <list default="true" id="707fa010-c8ac-4113-b1ba-f66ca33d47ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +45,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Survey_Processing_Recommender_System.py" />
+        <option value="$PROJECT_DIR$/testing.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="966" />
+    <option name="x" value="965" />
     <option name="width" value="960" />
     <option name="height" value="1030" />
   </component>
@@ -57,17 +60,7 @@
     </navigator>
     <panes>
       <pane id="Course" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Recommender-systems-of-Fenak" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Recommender-systems-of-Fenak" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -110,6 +103,7 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/testing.py" />
     <entry file="file://$PROJECT_DIR$/Survey_Processing_Recommender_System.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
