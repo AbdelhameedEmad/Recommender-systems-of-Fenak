@@ -41,54 +41,54 @@ def top100(title, data):
     return recommended_places
 
 #Creating the final list
+#creating the list of recommendations
 def final_list(list1,num1,list2,num2,list3,num3,list4,num4,list5,num5):
+    def creating_clone(list1):
+        z = 0
+        clone = [0] * len(list1)
+        for i in list1:
+            clone[z] = i
+            z += 1
+        return clone
+
     final_list = []
     list_of_lists = [list1,list2,list3,list4,list5]
     numbers_of_lists = [num1,num2,num3,num4,num5]
-    # top3_lists_locations = []
-    #numbers_of_lists_2 = [num1,num2,num3,num4,num5]
-    quarter_of_numbers_list = [round(num1/4),round(num2/4),round(num3/4),round(num4/4),round(num5/4)]
+    quarter_of_numbers_list = [round(i/4) for i in numbers_of_lists]
 
-    # #getting top 3 favorite lists locations
-    # i = 0
-    # while i < 3:
-    #     j = 0
-    #     max = numbers_of_lists_2[0]
-    #     max_location = 0
-    #     while j < len(numbers_of_lists):
-    #         if max < numbers_of_lists_2[j]:
-    #             max = numbers_of_lists_2[j]
-    #             max_location = j
-    #         if j == (len(numbers_of_lists) - 1):
-    #             numbers_of_lists_2[max_location] = -1
-    #             top3_lists_locations.append(max_location)
-    #         j += 1
-    #     i += 1
+    j = 0
+    for i in quarter_of_numbers_list:
+        if i <= 4:
+            quarter_of_numbers_list[j] = i * 2
+        j += 1
 
     #getting the final list
-    c = 0
     list_of_locations = []
-    j = 0
     even_num_list = []
     even_list_of_lists = []
+    j = 0
+    c = 0
 
     for i in numbers_of_lists:
         if i > 15:
             list_of_locations.append(j)
         j += 1
 
+
     for i in list_of_locations:
         num = quarter_of_numbers_list[i]
         even_num_list.append(num)
+
 
     for i in list_of_locations:
         l = list_of_lists[i]
         even_list_of_lists.append(l)
 
     while c < 4:
+        clone_even_num_list = creating_clone(even_num_list)
+        clone_quarter_of_numbers_list = creating_clone(quarter_of_numbers_list)
         if c % 2 == 0:
             flag = True
-            clone_even_num_list = even_num_list
             while flag:
                 count = 0
                 flag_counter = 0
@@ -108,7 +108,6 @@ def final_list(list1,num1,list2,num2,list3,num3,list4,num4,list5,num5):
 
         else:
             flag = True
-            clone_quarter_of_numbers_list = quarter_of_numbers_list
             while flag:
                 count = 0
                 flag_counter = 0
@@ -125,8 +124,7 @@ def final_list(list1,num1,list2,num2,list3,num3,list4,num4,list5,num5):
                         count += 1
                     if flag_counter >= len(clone_quarter_of_numbers_list):
                         flag = False
-
-
+        c += 1
 
     return final_list
 
