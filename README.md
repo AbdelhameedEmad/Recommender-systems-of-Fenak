@@ -22,3 +22,7 @@ I am using Cosine similarity to determine similarity between businesses, by tryi
 I am using yelp open dataset to test the recommender systems as it is similar to the data which will be used by the mobile application
 
 ![alt text](https://github.com/AbdelhameedEmad/Recommender-systems-of-Fenak/blob/master/Images/yelp-open-dataset.png)
+
+# New User Recommender System Flowchart
+
+![alt text](https://github.com/AbdelhameedEmad/Recommender-systems-of-Fenak/blob/master/Images/New%20Users%20Recommender%20Flowchart%20.png)
