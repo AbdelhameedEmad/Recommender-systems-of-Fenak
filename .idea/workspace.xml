@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="707fa010-c8ac-4113-b1ba-f66ca33d47ba" name="Default Changelist" comment="" />
+    <list default="true" id="707fa010-c8ac-4113-b1ba-f66ca33d47ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Survey_Processing_Recommender_System-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Survey_Processing_Recommender_System-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Survey_Processing_Recommender_System.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Survey_Processing_Recommender_System.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Survey_Processing_Recommender_System.py" beforeDir="false" afterPath="$PROJECT_DIR$/Survey_Processing_Recommender_System.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +18,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Survey_Processing_Recommender_System.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="-2459">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#55#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,8 +62,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Course" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -81,6 +86,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -104,10 +110,10 @@
     <entry file="file://$PROJECT_DIR$/testing.py" />
     <entry file="file://$PROJECT_DIR$/Survey_Processing_Recommender_System.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="-2459">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#55#74#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,3 +1,4 @@
+#Making recommendations from yelp dataset from ratings
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
@@ -5,16 +6,24 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 #importing the dataset and cleaning it from null value
 df = pd.read_csv("yelp_business.csv")
-data = df[["business_id", "name", "city", "categories"]]
+data = df[["business_id", "name", "city", "categories","stars"]]
 data = data.fillna("Giza")
-data = data.sample(frac=0.02, replace=True)
+data = data.sample(frac=0.06, replace=True)
+
+# #printing all cities in the dataset
+# print(pd.unique(data.city).tolist())
 
 #preparing the values that will be inputed in the final list function
 def recommendations(books, crafts, culture, food, outdoor,data):
 
+    #Recommending the businesses which ratings is >= 3
+    data = data[data['stars'] >= 3]
+
+#     #Recommending the businesses that are in the city the user is in
+#     data = data[data['city'] == city]
+
     # finding the first location that contains the inputed tag
     #needs the indexing to be numbers not name so use before (data = data.set_index('name'))
-
     def find_business(tag, data):
         wanted_business = data.iloc[0]
         #3 in data.iloc[0,3] is the number of the column of categories
@@ -65,7 +74,7 @@ def recommendations(books, crafts, culture, food, outdoor,data):
         c = 0
 
         for i in numbers_of_lists:
-            if i > 15:
+            if i > ((1/len(list_of_lists))*100):
                 list_of_locations.append(j)
             j += 1
 
@@ -94,7 +103,14 @@ def recommendations(books, crafts, culture, food, outdoor,data):
                         else:
                             flag_counter = 0
                             current_list = even_list_of_lists[count]
-                            final_list.append(current_list.pop(0))
+                            similarity_counter = 0
+                            similarity_flag = True
+                            while similarity_flag:
+                                if current_list[similarity_counter] not in final_list:
+                                    final_list.append(current_list.pop(similarity_counter))
+                                    similarity_flag = False
+                                else:
+                                    similarity_counter += 1
                             even_list_of_lists[count] = current_list
                             clone_even_num_list[count] = clone_even_num_list[count] - 1
                             count += 1
@@ -112,7 +128,16 @@ def recommendations(books, crafts, culture, food, outdoor,data):
                         else:
                             flag_counter = 0
                             current_list = list_of_lists[count]
-                            final_list.append(current_list.pop(0))
+                            similarity_counter = 0
+                            similarity_flag = True
+
+                            while similarity_flag:
+                                if current_list[similarity_counter] not in final_list:
+                                    final_list.append(current_list.pop(similarity_counter))
+                                    similarity_flag = False
+                                else:
+                                    similarity_counter += 1
+
                             list_of_lists[count] = current_list
                             clone_quarter_of_numbers_list[count] = clone_quarter_of_numbers_list[count] - 1
                             count += 1
@@ -133,7 +158,7 @@ def recommendations(books, crafts, culture, food, outdoor,data):
         recommended_places = []
         idx = indices[indices == title].index[0]
         score_series = pd.Series(cosine_sim[idx]).sort_values(ascending=False)
-        top_100_indexes = list(score_series.iloc[1:100].index)
+        top_100_indexes = list(score_series.iloc[0:100].index)
         for i in top_100_indexes:
             recommended_places.append(list(data.index)[i])
         return recommended_places
